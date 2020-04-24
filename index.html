@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <title>P.A.Y.E. Calculator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">P.A.Y.E. Calculator</a>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+			<form id="paye">
+				<div class="form-group">
+					<label class="col-form-label" for="salary">Enter Salary Without Currency</label>
+					<input type="text" class="form-control" id="salary" placeholder="Salary" required />
+				</div>
+				<div class="form-group">
+					<label class="col-form-label" for="occurrence">Select Salary Occurrence</label>
+					<select class="form-control" id="occurrence" required>
+						<option value="monthly">Monthly</option>
+						<option value="annually">Annually</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-block btn-dark">Calculate P.A.Y.E.</button>
+				</div>
+				<div id="msg"></div>
+			</form>
+		</div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
