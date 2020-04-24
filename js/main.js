@@ -57,6 +57,20 @@ window.onload = function () {
       if (c > 0) {
         totalPAYE += parseFloat(p * r);
         txb -= p;
+        if (i == taxes.length - 1 && txb > 0) {
+          p = parseFloat(taxes[i].price);
+          r = parseFloat(taxes[i].rate);
+          while (txb > 0) {
+            c = txb - p;
+            if (c > 0) {
+              totalPAYE += parseFloat(p * r);
+              txb -= p;
+            } else {
+              totalPAYE += parseFloat(txb * r);
+              break;
+            }
+          }
+        }
       } else {
         totalPAYE += parseFloat(txb * r);
         break;
